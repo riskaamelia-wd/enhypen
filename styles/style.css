@@ -1,0 +1,223 @@
+.jumbotron {
+	font-size: 100px;
+	padding: 40px;
+	background-color: black;
+	text-align: center;
+	color: white;
+	text-shadow: 3px 3px 3px #404040;
+}
+
+
+nav a {
+	font-size: 18px;
+	font-weight: 400;
+	text-decoration: none;
+	color: #e0e0e0;
+}
+
+nav {
+	background-color: #404040;
+	padding: 5px; 
+	position: sticky;
+	top: 0;
+	display: flex;	
+}
+
+nav ul{
+	padding: 5px;
+	margin: 0 auto;
+	width: 60%;
+	display: flex;
+	justify-content: space-between;
+}
+
+nav li {
+	display: inline;
+	margin-right: 20px;
+}
+
+
+nav a:hover {
+	font-weight: bold;
+	color: #404040;
+	background-color: black;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'PT Sans', sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: black;
+	overflow-x: hidden;
+}
+
+
+h2 {
+	padding: 5px;
+	text-align: center;
+	background-color: #202020;
+	color: #e0e0e0;
+	letter-spacing: 5px;
+}
+
+h3{
+	color: #e0e0e0;
+	text-align: center;
+}
+
+header{
+	display: inline;
+}
+
+main{
+	padding: 20px;
+	overflow: auto;
+}
+
+
+#content {
+	float: left;
+	width: 75%;
+	overflow: auto;
+}
+
+#content img{
+	width: 250px;
+	display: block;
+	margin: 0 auto;
+}
+
+#content p {
+	color: #e0e0e0;
+	text-align: justify;
+	margin: 30px;
+}
+
+aside {
+	float: right;
+	width: 25%;
+	padding-left: 20px;
+}
+
+#album{
+	color: #e0e0e0;
+	margin-top: 50px;
+	text-align: center;
+}
+
+#album h3{
+	background-color: #404040;
+	color: #e0e0e0;
+}
+
+
+footer{
+	padding: 20px;
+	color: #e0e0e0;
+	background-color: black;
+	text-align: center;
+	font-weight: bold;
+	background-color: #202020;
+}
+
+.profile {
+	color: #e0e0e0;
+	text-align: justify;
+}
+
+.profile header {
+	text-align: center;
+}
+
+.profile img {
+	width: 200px;
+}
+
+.card{
+	box-shadow: inset 1px 1px 5px 5px rgba(96,96,96,0.2);
+	border-radius: 5px;
+	padding: 20px;
+	margin-top: 20px;
+}
+
+.dropdown {
+	display: none;
+	flex-direction: column;
+	height: 20px;
+	justify-content: space-between;
+	position: relative;
+}
+
+.dropdown input{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	opacity: 0;
+	cursor: pointer;
+	display: block;
+	z-index: 2;
+}
+
+.dropdown span {
+	display: block;
+	width: 28px;
+	height: 3px;
+	background-color: #808080;
+	border-radius: 3px;
+	transition: all 0.5s;
+}
+
+
+
+@media screen and (max-width: 576px) {
+		
+	.dropdown {
+		display: flex;
+	}
+
+	nav{
+ 		width: 80%;
+		background: transparent;
+	}
+
+	nav ul{
+		position: absolute;
+		left: 0;	
+		transform: translateX(-110%);
+		transition: all 1s;
+		height: 100vh;
+		align-items: center;
+		justify-content: space-around;
+		flex-direction: column;
+		background-color: #202020;
+		z-index: -1;
+		opacity: 0;
+	}
+
+	nav ul.slide{
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+
+@media screen and (max-width: 1000px) {
+	nav ul{
+		width: 100%;
+	}
+	#content,
+	aside{
+		width: 100%;
+		padding: 0;
+	}
+	.jumbotron{
+		text-align: center;
+		font-size: 30px;
+	}
+}
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
